@@ -19,7 +19,7 @@ const links = [
 
 function Navbar() {
     return (
-        <header className="flex items-center justify-between py-4 fixed top-0 w-full px-20 left-0 bg-primary-black/50 backdrop-blur-sm">
+        <header className="flex items-center justify-between py-4 fixed top-0 w-full px-20 left-0 bg-primary-black/50 backdrop-blur-sm z-[9999]">
             <RadhTechnologyName />
             <div className="space-x-6">
                 {
