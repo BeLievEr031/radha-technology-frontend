@@ -1,7 +1,13 @@
+import React from "react"
+import About from "../sections/Home/About"
+import Hero from "../sections/Home/Hero"
 
 function Home() {
     return (
-        <div>Home</div>
+        <React.Fragment>
+            <Hero />
+            <About />
+        </React.Fragment>
     )
 }
 
