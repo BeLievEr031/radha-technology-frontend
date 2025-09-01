@@ -1,8 +1,8 @@
 import clsx from "clsx"
-import HeroImg from "../assets/hero-bg.svg"
-import HeroBubbleImg from "../assets/hero-bubble.avif"
-import CircleImg from "../assets/group-of-circle.svg"
-import StarImg from "../assets/star.svg"
+import HeroImg from "../../assets/hero-bg.svg"
+import HeroBubbleImg from "../../assets/hero-bubble.avif"
+import CircleImg from "../../assets/group-of-circle.svg"
+import StarImg from "../../assets/star.svg"
 import CircleButton from "../../components/CircleButton"
 function Hero() {
     return (
