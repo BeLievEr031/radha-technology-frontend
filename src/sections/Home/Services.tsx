@@ -8,16 +8,18 @@ import type { ReactNode } from "react"
 function Services() {
     return (
         <section className="px-30
-        bg-black/50 min-h-screen py-20">
+        bg-black/50 py-20 relative">
             <Title>Services</Title>
             <h2 className="text-8xl font-semibold">Expertise Solutions</h2>
 
-            <div className="pt-20 space-y-10">
+            <div className="pt-20 space-y-10 relative z-50">
                 <ServiceRow img={WebsiteServiceImg}>01. Website Development</ServiceRow>
                 <ServiceRow img={AppServiceImg}>02. App Development</ServiceRow>
                 <ServiceRow img={WordpressServiceImg}>03. Wordpress Development</ServiceRow>
                 <ServiceRow img={UIUXServiceImg}>04. UI/UX Desginer</ServiceRow>
             </div>
+
+            <div className="absolute size-[180px] right-0 top-1/2 bg-primary/80 rounded-full translate-x-1/2 blur-[100px]"></div>
         </section>
     )
 }
