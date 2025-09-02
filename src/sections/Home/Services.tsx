@@ -8,7 +8,7 @@ import type { ReactNode } from "react"
 function Services() {
     return (
         <section className="px-30
-        bg-black/50 py-20 relative">
+        bg-black/50 py-20 relative overflow-hidden">
             <Title>Services</Title>
             <h2 className="text-8xl font-semibold">Expertise Solutions</h2>
 
@@ -45,7 +45,7 @@ function ServiceRow({ children, img }: { children: ReactNode, img: string }) {
         >
 
             <img src={img} alt={img}
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-top breath"
             />
         </div>
 
