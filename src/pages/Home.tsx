@@ -3,6 +3,7 @@ import About from "../sections/Home/About"
 import Hero from "../sections/Home/Hero"
 import Carousal from "../components/Carousal"
 import Services from "../sections/Home/Services"
+import Portfolio from "../sections/Home/Portfolio"
 
 function Home() {
     return (
@@ -11,6 +12,7 @@ function Home() {
             <About />
             <Carousal />
             <Services />
+            <Portfolio />
         </React.Fragment>
     )
 }
