@@ -17,6 +17,7 @@ const pricingData: ICard[] = [
         type: "Growth",
         price: "₹10,000",
         features: [
+            "Including starter plan",
             "Up to 7 pages with custom design",
             "CMS integration (WordPress or similar)",
             "Contact forms & lead capture",
