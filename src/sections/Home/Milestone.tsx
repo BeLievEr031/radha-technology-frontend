@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 function Milestone() {
     return (
-        <section className="bg-black/50 px-44 py-20 font-outfit">
+        <section className="bg-black/50 px-44 py-20 font-outfit overflow-hidden">
             <Title>Our Milestones</Title>
             <h1 className="text-8xl font-semibold mt-4">Early Achievements</h1>
 
