@@ -23,7 +23,7 @@ function Hero() {
                     <div className="w-[100px] h-px bg-white/50 mt-1"></div>
                 </div>
 
-                <div className=" uppercase font-semibold -space-y-10 text-primary-gray">
+                <div className=" uppercase font-semibold -space-y-10 text-white">
                     <div className="flex items-center gap-x-8">
                         <p className="text-[115px]">Website & App</p>
                         <img src={StarImg} alt="" className="shrink-0 rotate-360" />
