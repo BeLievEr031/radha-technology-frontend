@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom"
 import CircleButton from "../../components/CircleButton"
-import { ArrowRight, Check } from "../../components/Icons"
-
+import { ArrowRight } from "../../components/Icons"
+import { motion } from "motion/react"
 function Footer() {
+
+    const viewportConfig = { once: false, amount: 0.1 };
+    const fadeUpVariant = {
+        initial: { opacity: 0, translateY: 100, },
+        inView: {
+            opacity: 1,
+            translateY: 0,
+        }
+    }
     return (
         <footer className="px-30 py-20">
             <h1 className="uppercase text-center text-primary text-[160px] font-semibold">Let’s Talk</h1>
@@ -74,10 +83,23 @@ function Footer() {
             <p className="font-plus-jakarta">© 2025 All rights for Radh Technology.</p>
 
 
-            <div className="text-[180px] uppercase font-bold pt-10 -space-y-18 tracking-wide">
-                <p>Radha</p>
-                <p>Technology</p>
-            </div>
+            <motion.div
+                className="text-[180px] uppercase font-bold pt-2 -space-y-18 tracking-wide">
+                <motion.p
+                    variants={fadeUpVariant}
+                    initial="initial"
+                    whileInView="inView"
+                    viewport={viewportConfig}
+                    transition={{ duration: 0.5 }}
+                >Radha</motion.p>
+                <motion.p
+                    variants={fadeUpVariant}
+                    initial="initial"
+                    whileInView="inView"
+                    viewport={{ ...viewportConfig, amount: 0.1 }}
+                    transition={{ duration: 0.5 }}
+                >Technology</motion.p>
+            </motion.div>
         </footer>
     )
 }
