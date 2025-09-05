@@ -2,20 +2,49 @@ import Title from "../../components/Title"
 import RhombusImg from "../../assets/rhombus.svg"
 import Logo from "../../components/Logo"
 import CircleButton from "../../components/CircleButton"
+import { motion } from "motion/react"
 function About() {
+    const container = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.5,
+                delayChildren: 0.3,
+            },
+        },
+    };
+
+    const item = {
+        hidden: { opacity: 0, translateY: 40 },
+        show: {
+            opacity: 1,
+            translateY: 0,
+            transition: { duration: 0.6, },
+        },
+    };
     return (
-        <section className="px-30 font-outfit min-h-screen py-10 bg-black/45">
-            <Title>
-                About us
-            </Title>
-            <div className="space-y-3 mt-3 flex items-center justify-between">
+        <motion.section
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.16 }}
+            className="px-30 font-outfit min-h-screen py-10 bg-black/45">
+            <motion.div variants={item}>
+                <Title>
+                    About us
+                </Title>
+            </motion.div>
+            <motion.div
+                variants={item}
+                className="space-y-3 mt-3 flex items-center justify-between">
                 <div className="text-8xl font-semibold pt-4">
                     Turning Ideas
                     <br />
                     Into Websites & Apps
                 </div>
                 <img src={RhombusImg} alt="" />
-            </div>
+            </motion.div>
 
             <div className="flex items-center pt-10">
                 <div className="rotate-0">
@@ -46,7 +75,7 @@ function About() {
                     </CircleButton>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
 
