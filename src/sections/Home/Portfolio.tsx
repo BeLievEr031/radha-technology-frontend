@@ -6,11 +6,24 @@ import PortFolioSprkleImg from "../../assets/portfolio-sparkle.svg"
 import type { ReactNode } from "react"
 import { Link } from "react-router-dom"
 import CircleButton from "../../components/CircleButton"
+import { motion } from "motion/react"
 function Portfolio() {
+
     return (
         <section className="px-30 py-20 bg-black min-h-screen relative">
 
-            <h1 className="text-[160px] uppercase text-center font-bold">Portfolio</h1>
+            <motion.h1
+                initial={{
+                    opacity: 0,
+                    translateY: 20
+                }}
+                whileInView={{
+                    opacity: 1,
+                    translateY: 0
+                }}
+                transition={{ duration: 0.3 }}
+                viewport={{ once: false, amount: 0.5 }}
+                className="text-[160px] uppercase text-center font-bold">Portfolio</motion.h1>
             <div className="pt-10 grid grid-cols-2">
                 <div className="shrink-0 space-y-5">
                     <PortfolioCard img={OrnageFunPortfolio}>

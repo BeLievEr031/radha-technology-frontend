@@ -14,8 +14,24 @@ function Footer() {
     }
     return (
         <footer className="px-30 py-20">
-            <h1 className="uppercase text-center text-primary text-[160px] font-semibold">Let’s Talk</h1>
-            <p className="text-[96px] font-semibold text-center cursor-pointer hover:text-primary transition-colors duration-300 ease-in-out">hello@radhatechnology.in</p>
+            <motion.h1
+                initial={{ opacity: 0, translateY: 100 }}
+                whileInView={{
+                    opacity: 1,
+                    translateY: 0
+                }}
+                viewport={{ once: false, amount: .3 }}
+                transition={{ duration: .3 }}
+                className="uppercase text-center text-primary text-[160px] font-semibold">Let’s Talk</motion.h1>
+            <motion.p
+                initial={{ opacity: 0, translateY: 100 }}
+                whileInView={{
+                    opacity: 1,
+                    translateY: 0
+                }}
+                viewport={{ once: false, amount: .3 }}
+                transition={{ duration: .3 }}
+                className="text-[96px] font-semibold text-center cursor-pointer hover:text-primary transition-colors duration-300 ease-in-out -mt-10">hello@radhatechnology.in</motion.p>
             <div className="flex justify-center pt-10">
                 <CircleButton>
                     contact
